@@ -1,0 +1,27 @@
+
+
+<div class= "items">
+
+<div class= "cointainer">
+<div class= "items border-bottom">
+<h1><%= @task.title %></h1>
+<p><%= @task.details %></p>
+<p><%= @task.completed %></p>
+</div>
+
+
+</div>
+  <div class= "button">
+  <%=link_to "Go Back", tasks_path%>
+  </div>
+  <div class= "button">
+  <%=link_to "Update", task_edit_path(@task) %>
+  </div>
+  <div class= "button">
+<%= link_to "Delete",
+  task_path(@task),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+%>
+
+</div>
+</div>

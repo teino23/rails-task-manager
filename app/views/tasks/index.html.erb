@@ -1,0 +1,16 @@
+<div class = "container">
+  <h1>My tasks</h1>
+
+  <div class = list-items>
+    <ul>
+      <% @tasks.each do |task| %>
+      <%=link_to task.title, task_path(task)%>
+      <li><%= task.completed %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class = button>
+  <%= link_to "Create New Task", tasks_new_path %>
+  </div>
+</div>
